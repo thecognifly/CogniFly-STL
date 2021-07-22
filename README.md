@@ -50,7 +50,6 @@ Flight controller and ESC (4-in-1) are mounted between the battery and the centr
 ### Neural Network Accelerator
 - [Google AIY Vision Kit](https://aiyprojects.withgoogle.com/vision) (the Raspberry Pi Zero W + Camera are included). You don't really need it unless you want to run some neural network models. You can try the [Google Coral Edge TPU USB](https://github.com/ricardodeazambuja/libedgetpu-rpi0/releases/tag/rpi0_tflite_edgetpu) with [an adapter](https://shop.pimoroni.com/products/usb-to-microusb-otg-converter-shim) as well.
 ### Extras
-- (1x) [Level Shifter](https://en.wikipedia.org/wiki/Level_shifter) (5V <=> 3V)
 - (1x) XT30 connector + cable to solder it to the ESC
 - Cable zip ties (approx. 2mm wide)
 - M2 screws / nuts / rubber rings to mount the ESC and FC (they usually come with the FC).
