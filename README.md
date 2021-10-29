@@ -12,8 +12,8 @@
 ![Squeeze and fit 2](imgs/snap-fit.jpg "Squeeze and fit 2")
 It's a very snug fit! You need to squeeze the round tube-like side, but without damaging it. Probably the hardest part to assemble.
 
-![All parts together as they should be printed](Latest/CogniFly_All_Parts.png "All parts together as they should be printed")
-The only part that needs support to be printed is the [Battery_holder_magnetic_lid.stl](Latest/Battery_holder_magnetic_lid.stl). Depending on your printer, settings, fillament, etc. some holes will change the internal diameter and they may be too loose. In this case, you will need to glue the struts (carbon fiber or bamboo skewers) or, instead of absorbing the impact, the frame will just fall apart and almost no impact energy will be absorbed by the flexible parts. If you get a nice snug-fit between the struts and the TPU parts, you will not need to glue them together. In the case of bamboo, because they break much more easily than carbon fiber (never managed to break any!), if you glue them it will be annoying to replace.
+![All parts together as they should be printed](CogniFly#8_Crash_Tests/CogniFly_All_Parts.png "All parts together as they should be printed")
+The only part that needs support to be printed is the [Battery_holder_magnetic_lid.stl](CogniFly#8_Crash_Tests/Battery_holder_magnetic_lid.stl). Depending on your printer, settings, fillament, etc. some holes will change the internal diameter and they may be too loose. In this case, you will need to glue the struts (carbon fiber or bamboo skewers) or, instead of absorbing the impact, the frame will just fall apart and almost no impact energy will be absorbed by the flexible parts. If you get a nice snug-fit between the struts and the TPU parts, you will not need to glue them together. In the case of bamboo, because they break much more easily than carbon fiber (never managed to break any!), if you glue them it will be annoying to replace.
 
 
 ![Render](imgs/Perspective.png "Render")
@@ -26,7 +26,7 @@ Flight controller and ESC (4-in-1) are mounted between the battery and the centr
 ### Brushless Motors and Propellers
 - (4x) 1104 6000KV (use with 3025 2 blades propeller, used in our paper)  
 **or**   
-- (4x) 1106 3800KV (use with 4025 2 blades propeller, and it will need a bigger frame / longer struts or the [experimental motor bases](https://github.com/thecognifly/CogniFly-STL/blob/master/Latest/MotorBase_Shorter_Taller.stl) to avoid hitting the RPI or AIY Bonnet)
+- (4x) 1106 3800KV (use with 4025 2 blades propeller, and it will need a bigger frame / longer struts or the [experimental motor bases](https://github.com/thecognifly/CogniFly-STL/blob/master/CogniFly#8_Crash_Tests/MotorBase_Shorter_Taller.stl) to avoid hitting the RPI or AIY Bonnet)
 ### 3D Printing Filament
 - TPU 95A for flexible parts
 - PLA or ABS for the rigid ones
