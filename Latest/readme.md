@@ -1669,8 +1669,8 @@ country=<Insert 2 letter ISO 3166-1 country code here>
 You must replace ```<Insert 2 letter ISO 3166-1 country code here>``` with your country code!
 
 Just below the lines above, you need to use one of the patterns below according to the type of wifi network available for you (and don't forget to replace the characters between ```" "``` with your own stuff):
-* ssid: wifi network name between parenthesis
-* psk: wifi password between parenthesis
+* ssid: wifi network name between ```" "```
+* psk: wifi password between ```" "```
 
 ```
 # 
