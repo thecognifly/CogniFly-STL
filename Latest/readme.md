@@ -10,8 +10,7 @@ configuration of the drone.
 
 The frame is built with wood sticks and resists to impact while flying.
 Another configuration is possible with carbon fiber, but it is more
-expensive and heavier. The drone with the wood frame weights 237g and
-with carbon frame weighs 255g. It uses a Lipo battery 2S (7,4V) with a
+expensive and heavier. The bamboo version of CogniFly weighs 237g (and 255g if you swap bamboo for carbon fibre rods). It uses a Lipo battery 2S (7,4V) with a
 2000mAh capacity, leading to a 17-minute flight time. (The test has been
 made in one long flight, from 8,4V to 6,6V, in the position hold mode).
 
@@ -30,6 +29,11 @@ made in one long flight, from 8,4V to 6,6V, in the position hold mode).
 3. [Software setup](readme.md#software-setup)
     * [INAV](readme.md#inav)
     * [Raspberry Pi Zero W](readme.md#raspberry-pi-zero-w)
+4. [Troubleshooting](readme.md#troubleshooting)
+    * [Wifi not working](readme.md#wifi-not-working)
+    * [ssh not available](readme.md#ssh-not-available)
+    * [Flashing the FC](readme.md#flashing-the-fc)
+5. [Acknowledgements](readme.md#acknowledgements)
 
 ## Bill of Materials
 
@@ -1651,6 +1655,65 @@ The drone should now be ready to fly, see the section Usage on
 repository</span>](https://github.com/thecognifly/cognifly-python#installation)
 to learn how to control the drone.
 
+
+## Troubleshooting
+### Wifi not working
+The RPI allows the user to setup the connection by the creation of a file called ```wpa_supplicant.conf``` inside the boot partition (the only partition that will show on Windows computers when you read the SD card) and it will automatically connect in the next boot.
+
+The beginning of the file ```wpa_supplicant.conf``` will have these lines:
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=<Insert 2 letter ISO 3166-1 country code here>
+```
+You must replace ```<Insert 2 letter ISO 3166-1 country code here>``` with your country code!
+
+Just below the lines above, you need to use one of the patterns below according to the type of wifi network available for you (and don't forget to replace the characters between ```" "``` with your own stuff):
+* ssid: wifi network name between parenthesis
+* psk: wifi password between parenthesis
+
+```
+# 
+# 1) Visible SSID with password
+#
+network={
+	ssid="access_point_visible_ssid"
+	psk="wifi-password"
+	key_mgmt=WPA-PSK
+	priority=20
+	id_str="Hotspot"
+}
+
+#
+# 2) Hidden SSID with password
+#
+network={
+	ssid="access_point_hidden_ssid"
+	scan_ssid=1
+	psk="wifi-passpord"
+	key_mgmt=WPA-PSK
+	priority=10
+	id_str="AP_Hidden_ssid"
+}
+
+#
+# 3) Access point without password
+#
+network={
+	ssid="access_point_without_pass"
+	key_mgmt=NONE
+	priority=5
+	id_str="AP_No_Pass"
+}
+```
+- [List of possible problems with solutions](https://support.thepihut.com/hc/en-us/articles/360014695877-Raspberry-Pi-won-t-connect-to-WiFi)
+- [Setting up a headless Raspberry Pi](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-headless-raspberry-pi)
+### SSH not available
+It's possible to enable SSH by simply creating an empty file named ```ssh.txt``` in the boot partition (the only partition that will show on Windows computers when you read the SD card). The RPI will enable SSH next time it boots.
+- [More instructions about remote access](https://www.raspberrypi.com/documentation/computers/remote-access.html)
+### Flashing the FC
+- Double check you are using the correct firmware version.
+- Make sure you set the flight controller to DFU mode before trying to flash a new firmware.
 
 
 ## Acknowledgements
