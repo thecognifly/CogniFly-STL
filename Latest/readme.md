@@ -1654,4 +1654,4 @@ to learn how to control the drone.
 
 
 ## Acknowledgements
-Author of the original version: https://github.com/CharlesSol7
+Author of the original version of this manual: https://github.com/CharlesSol7
