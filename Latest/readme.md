@@ -58,7 +58,7 @@ screws, wire strippers, pliers…
 <tr class="odd">
 <td>CF01-CF04</td>
 <td><p>Wood stick</p>
-<p><em>Or carbon rods</em></p></td>
+<p><em>Or carbon fibre rods</em></p></td>
 <td><p>Frame</p>
 <p>Diameter: 3mm; Length : &gt;25cm</p></td>
 <td>20 sticks</td>
