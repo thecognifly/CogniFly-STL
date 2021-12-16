@@ -1650,3 +1650,8 @@ The drone should now be ready to fly, see the section Usage on
 [<span class="underline">cognifly-python
 repository</span>](https://github.com/thecognifly/cognifly-python#installation)
 to learn how to control the drone.
+
+
+
+## Acknowledgements
+Author of the original version: https://github.com/CharlesSol7
