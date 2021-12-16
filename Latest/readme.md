@@ -10,7 +10,7 @@ configuration of the drone.
 
 The frame is built with wood sticks and resists to impact while flying.
 Another configuration is possible with carbon fiber, but it is more
-expensive and heavier. The bamboo version of CogniFly weighs 237g (and 255g if you swap bamboo for carbon fibre rods). It uses a Lipo battery 2S (7,4V) with a
+expensive and heavier. The bamboo version of CogniFly weighs 237g (and 255g if you swap bamboo for carbon fibre rods in THIS version). It can also use a Lipo battery 2S (7,4V) with a
 2000mAh capacity, leading to a 17-minute flight time. (The test has been
 made in one long flight, from 8,4V to 6,6V, in the position hold mode).
 
