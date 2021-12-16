@@ -439,30 +439,19 @@ grocery store</td>
 <td>7,99</td>
 </tr>
 <tr class="even">
-<td>Total</td>
+<td colspan="5">Total</td>
 <td>407,9</td>
 <td>1502,75</td>
 <td>2881,99</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
-<td>Unit total</td>
+<td colspan="5">Unit total</td>
 <td>407,9</td>
 <td>300,55</td>
 <td>288,199</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
-
-Need to be selected, Long shipping, Out of stock, Maximum one per order,
-size not tested
 
 ## *Table 3 : Bill of Materials using Google AIY Vision Kit*
 
@@ -690,7 +679,7 @@ grocery store</td>
 <td>7,99</td>
 </tr>
 <tr class="even">
-<td>Total</td>
+<td colspan="5">Total</td>
 <td>441,63</td>
 <td>1688.37</td>
 <td>3253,23</td>
@@ -700,7 +689,7 @@ grocery store</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Unit total</td>
+<td colspan="5">Unit total</td>
 <td>441,63</td>
 <td>337,67</td>
 <td>325,32</td>
@@ -711,9 +700,6 @@ grocery store</td>
 </tr>
 </tbody>
 </table>
-
-Need to be selected, Long shipping, Out of stock, Maximum one per order,
-size not tested
 
 If the vision kit from google is used, it already includes the Raspberry
 Pi Zero, the Pi camera, the SD card, and the mini camera cable. The
@@ -949,7 +935,7 @@ grocery store</td>
 <td>7,99</td>
 </tr>
 <tr class="even">
-<td>Total</td>
+<td colspan="5">Total</td>
 <td>478,21</td>
 <td>1871,27</td>
 <td>3619,03</td>
@@ -959,7 +945,7 @@ grocery store</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Unit total</td>
+<td colspan="5">Unit total</td>
 <td>478,21</td>
 <td>374,254</td>
 <td>361,903</td>
@@ -970,9 +956,6 @@ grocery store</td>
 </tr>
 </tbody>
 </table>
-
-Need to be selected, Long shipping, Out of stock, Maximum one per order,
-size be tested
 
 The Coral board has the same connection than the Raspberry Pi Zero and
 includes a memory, which allows to get rid of the SD card. It has better
