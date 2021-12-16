@@ -683,20 +683,12 @@ grocery store</td>
 <td>441,63</td>
 <td>1688.37</td>
 <td>3253,23</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
 <td colspan="5">Unit total</td>
 <td>441,63</td>
 <td>337,67</td>
 <td>325,32</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -939,20 +931,12 @@ grocery store</td>
 <td>478,21</td>
 <td>1871,27</td>
 <td>3619,03</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
 <td colspan="5">Unit total</td>
 <td>478,21</td>
 <td>374,254</td>
 <td>361,903</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
