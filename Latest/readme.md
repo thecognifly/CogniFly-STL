@@ -1,20 +1,4 @@
-| MIST LAB - Polytechnique Montréal |
-| --------------------------------- |
-| Building Instructions             |
-| Version 2                         |
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p>Charles Sol</p>
-<p>12/01/2021</p></td>
-</tr>
-</tbody>
-</table>
-
-![](./media//media/image1.png)
-
-# The project
+# Building Instructions (Version 2)
 
 The Cognifly is a sub-250g drone with easy manufacturing, allowing
 customization and autonomous flight. It has an optical flow and lidar,
@@ -33,7 +17,21 @@ made in one long flight, from 8,4V to 6,6V, in the position hold mode).
 
 ![](./media//media/image2.jpeg)
 
-# Bill of Materials
+## Table of Contents
+1. [Bill of Materials](readme.md#bill-of-materials)
+    * [Table 1: Description of the hardware for one drone](readme.md#table-1-description-of-the-hardware-for-one-drone)
+    * [Table 2: Bill of Materials using a Raspberry Pi Zero](readme.md#table-2-bill-of-materials-using-a-raspberry-pi-zero)
+    * [Table 3: Bill of Materials using a Google AIY Vision Kit](readme.md#table-3-bill-of-materials-using-a-google-aiy-vision-kit)
+    * [Table 4: Bill of Materials using a Coral board](readme.md#table-4-bill-of-materials-using-a-coral-board)
+2. [Building the drone](readme.md#building-the-drone)
+    * [Frame](readme.md#frame)
+    * [Electronics](readme.md#electronics)
+    * [Putting everything together](readme.md#putting-everything-together)
+3. [Software setup](readme.md#software-setup)
+    * [INAV](readme.md#inav)
+    * [Raspberry Pi Zero W](readme.md#raspberry-pi-zero-w)
+
+## Bill of Materials
 
 To build this drone, some tools will be needed and not included in the
 following list: a 3D printer (ideally two so you can print continuously
@@ -41,9 +39,7 @@ the TPU parts and the PLA parts for more than 1 drone), a soldering iron
 with tin (and flux), a hot glue gun with glue, and a screwdriver for M2
 screws, wire strippers, pliers…
 
-Table 1 gives all the material needed to build one drone.
-
-## *Table 1: Description of hardware for one drone*
+### *Table 1: Description of the hardware for one drone*
 
 <table>
 <thead>
@@ -185,7 +181,7 @@ material. Table 2 uses the Raspberry Pi Zero without Google vision kit;
 table 3 uses the Raspberry Pi Zero with Google vision kit; table 4 uses
 the Mini Coral board instead of the Raspberry Pi.
 
-## *Table 2: Bill of Materials using Raspberry Pi Zero*
+### *Table 2: Bill of Materials using a Raspberry Pi Zero*
 
 <table>
 <thead>
@@ -453,7 +449,7 @@ grocery store</td>
 </tbody>
 </table>
 
-## *Table 3 : Bill of Materials using Google AIY Vision Kit*
+### *Table 3: Bill of Materials using a Google AIY Vision Kit*
 
 <table>
 <thead>
@@ -699,7 +695,7 @@ vision bonnet can be useful for advanced image processing. Moreover, as
 the Raspberry Pi Zero W can be difficult to order alone (only one per
 order otherwise expensive), this choice can be a good solution.
 
-## *Table 4 : Bill of Materials using Coral board*
+### *Table 4: Bill of Materials using a Coral board*
 
 <table>
 <thead>
@@ -975,9 +971,9 @@ around 4 hours each because some pieces need supports and others do not.
 ![Une image contenant texte Description générée
 automatiquement](./media//media/image3.jpeg)
 
-# Building the drone
+## Building the drone
 
-## Frame
+### Frame
 
 The frame is built with wood sticks, flexible plastics joints, and hard
 plastic base. Wood stick can be replaced with carbon rods, leading to a
@@ -999,9 +995,8 @@ configuration:
 
   - 35mm/s printing speed (verify with your TPU filament)
 
-The table 5 shows the joints needed to be printed with TPU95a.
 
-*Table 5: Joints made from TPU95a*
+**Table 5: Joints made from TPU95a**
 
 | Joint  | 3D part                        | Quantity | Joint  | 3D part                        | Quantity |
 | ------ | ------------------------------ | -------- | ------ | ------------------------------ | -------- |
@@ -1030,7 +1025,7 @@ configuration:
 
   - 60mm/s printing speed (verify with your PLA filament)
 
-*Table 6: Joints made from PLA*
+**Table 6: Joints made from PLA**
 
 | Joint  | 3D part                         | Quantity            | Joint  | 3D part                         | Quantity |
 | ------ | ------------------------------- | ------------------- | ------ | ------------------------------- | -------- |
@@ -1043,7 +1038,7 @@ Orientation of the parts in the printer are shown in figure 2. The
 printing time is 1h35 for the PLA\_1 part (without printing supports)
 and 4h46 for the other PLA parts (with printing support).
 
-*Figure 2: Layout of PLA parts on Ultimaker 3 *
+*Figure 2: Layout of PLA parts on Ultimaker 3*
 
 ![](./media//media/image18.png) ![](./media//media/image19.png)
 
@@ -1067,7 +1062,7 @@ Insert the TPU\_4 part into the TPU\_3 central hole, you will need a
 thin flat or round pliers. Reproduce the operations illustrated in the
 figure 3.
 
-*Figure 3: Insertion process of the joint (TPU\_4 into TPU\_3) *
+*Figure 3: Insertion process of the joint (TPU\_4 into TPU\_3)*
 
 ![Une image contenant outil, clé Description générée
 automatiquement](./media//media/image20.jpeg)![Une image contenant
@@ -1089,7 +1084,7 @@ Do this operation with the four groups of joint (for one drone).
 You have now all the component to build the frame. Figure 4 shows them
 for the assembly of one drone.
 
-*Figure 4: Frame components *
+*Figure 4: Frame components*
 
 ![Une image contenant texte Description générée
 automatiquement](./media//media/image26.jpeg)
@@ -1170,7 +1165,7 @@ générée automatiquement](./media//media/image36.jpeg)
 
 ![](./media//media/image41.jpeg)
 
-## Electronics
+### Electronics
 
 The electronics of the drone need to be soldered into the flight
 controller (FC). The Optical flow sensor and the Raspberry Pi Zero W use
@@ -1183,7 +1178,7 @@ Take the flight controller, the Raspberry Pi, the Optical Flow, the four
 motors, the Deans connector, the part PLA\_2 and PLA\_3, and the wires
 as shown on the figure 5.
 
-*Figure 5: Electronics components *
+*Figure 5: Electronics components*
 
 ![](./media//media/image42.jpeg)
 
@@ -1209,7 +1204,7 @@ Connect all the components to the flight controller as following.
     flux and tin on the following connectors of the FC: TX2; RX2; TX6;
     RX6; 4.5V; 5V; Ground (2) and all motors connectors.
 
-![](./media//media/image48.jpeg)![](./media//media/image49.jpeg)
+![](./media//media/image48.jpeg) ![](./media//media/image49.jpeg)
 
 5)  Solder the AWG28 wires on the connectors of the FC you prepared in
     previous step. Help you with the pictures.
@@ -1252,7 +1247,7 @@ UART6 to work properly.
 
 ![](./media//media/image57.jpeg)![](./media//media/image58.jpeg)
 
-## Assembly
+### Putting everything together
 
 Now the electronics have to be mounted on the frame, the hardware will
 then be all set for the drone.
@@ -1263,7 +1258,7 @@ Take the built frame, the electronics, the propellers, the screws, the
 rubber spacers, the PLA\_5, PLA\_6 and PLA\_7 parts, as shown in figure
 6.
 
-*Figure 6: Hardware components *
+*Figure 6: Hardware components*
 
 ![](./media//media/image59.jpeg)
 
@@ -1355,9 +1350,10 @@ automatiquement](./media//media/image80.jpeg)
 
 5)  Redo steps 1 to 4 for the number of batteries you want to use.
 
-**Safety precaution and troubleshooting**: Before connecting the battery
+**Safety precaution and troubleshooting**:  
+Before connecting the battery
 to the drone, it is suggested to verify with a multimeter the input and
-outputs power connectors of flight controller. If a short circuit is
+outputs power connectors of the flight controller. If a short circuit is
 detected, don’t connect the battery, and verify/redo soldering. If
 verification successful, connect the battery to the drone and make sure
 flight controller is lightning up. If not, disconnect the battery
@@ -1392,9 +1388,9 @@ files on the Raspberry Pi.
 automatiquement](./media//media/image85.jpeg)
 ![](./media//media/image86.jpeg)
 
-# Setup of the drone
+## Software setup
 
-## INAV
+### INAV
 
 The configuration of the flight controller is made with INAV. It is an
 open-source firmware compatible with a wide range of flight controllers.
@@ -1530,7 +1526,7 @@ requires the drone to be hold horizontal).
 
 INAV configuration is now completed
 
-## Raspberry Pi
+### Raspberry Pi Zero W
 
 The configuration of the Raspberry Pi Zero is easily made loading a disk
 image on the micro-SD card. It allows to execute Python programs
@@ -1570,10 +1566,12 @@ on SD card: *boot* and *rootfs*.
 Access the *boot* folder of the SD card and create a file without
 extension named *ssh*.
 
+***Linux system may be required to access the rootfs partition for the
+following steps!***
+
 **Step 15**
 
-Linux system may be required to access the rootfs partition for the
-following steps. To configure the wpa-supplicant, edit
+To configure the wpa-supplicant, edit
 */rootfs/etc/wpa\_supplicant/wpa\_supplicant.conf* file. (On linux, this
 may require *sudo* command), adding the following (with the name of your
 wifi connection) at the end of *wpa\_supplicant.conf*.
@@ -1599,12 +1597,13 @@ drone name in */rootfs/etc/hosts* file.
 Enable the pi camera and the UART serial port editing the
 */boot/config.txt* file under the *\[all\]* section, set the following
 lines:
-
+```
 enable\_uart=1 \# serial port
 
 start\_x=1 \# camera
 
 gpu\_mem=128 \# camera
+```
 
 **Step 18**
 
@@ -1630,21 +1629,24 @@ software can be downloaded to establish the ssh connection.
 
 When Raspberry Pi successfully connected via ssh, execute the following
 on the Raspberry Pi.
-
+```
 sudo apt-get update
 
 sudo apt-get install libatlas-base-dev libopenjp2-7 libtiff5 python3-pip
+```
 
 **Step 22**
 
 Install the cognifly-python library on the drone executing the following
 command.
 
+```
 pip3 install --upgrade pip
 
 pip3 install cognifly
+```
 
-The drone is now ready to fly, see the section Usage on
+The drone should now be ready to fly, see the section Usage on
 [<span class="underline">cognifly-python
 repository</span>](https://github.com/thecognifly/cognifly-python#installation)
 to learn how to control the drone.
