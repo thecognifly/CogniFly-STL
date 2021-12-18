@@ -1602,11 +1602,11 @@ Enable the pi camera and the UART serial port editing the
 */boot/config.txt* file under the *\[all\]* section, set the following
 lines:
 ```
-enable\_uart=1 \# serial port
+enable_uart=1 # serial port
 
-start\_x=1 \# camera
+start_x=1 # camera
 
-gpu\_mem=128 \# camera
+gpu_mem=128 # camera
 ```
 
 **Step 18**
