@@ -1594,7 +1594,7 @@ ssid="yourNetworkSSID"
 
 psk="yourNetworkPassword"
 
-scan\_ssid=1
+scan_ssid=1
 
 }
 ```
