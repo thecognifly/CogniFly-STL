@@ -1361,11 +1361,15 @@ Before connecting the battery
 to the drone, it is suggested to verify with a multimeter the input and
 outputs power connectors of the flight controller. If a short circuit is
 detected, don’t connect the battery, and verify/redo soldering. If
-verification successful, connect the battery to the drone and make sure
+verification is successful, connect the battery to the drone and make sure
 flight controller is lightning up. If not, disconnect the battery
 immediately and touch carefully the chip of flight controller to see if
-it is overheating. If abnormally hot, this may indicate a short circuit
+it is overheating. If it's abnormally hot, this may indicate a short circuit
 with low voltage outputs, otherwise, it could be RX/TX connections.
+
+One extra suggestion is to wear safety glasses when operating the drone 
+because the motors spin at high speeds and a faulty propeller could shatter projecting 
+plastic bits towards your eyes.
 
 *Figure 7: Camera Components*
 
@@ -1580,8 +1584,10 @@ following steps!***
 To configure the wpa-supplicant, edit
 */rootfs/etc/wpa\_supplicant/wpa\_supplicant.conf* file. (On linux, this
 may require *sudo* command), adding the following (with the name of your
-wifi connection) at the end of *wpa\_supplicant.conf*.
+wifi connection) at the end of *wpa\_supplicant.conf*. Check the [troubleshooting section](readme.md#troubleshooting)
+if you need extra information.
 
+```
 network={
 
 ssid="yourNetworkSSID"
@@ -1591,6 +1597,7 @@ psk="yourNetworkPassword"
 scan\_ssid=1
 
 }
+```
 
 **Step 16**
 
