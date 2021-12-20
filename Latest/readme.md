@@ -1297,7 +1297,9 @@ rubber spacers, the PLA\_5, PLA\_6 and PLA\_7 parts, as shown in figure
 
 6)  Put the motors at their respective place by passing them through the
     wood sticks, then screw them with the 4mm screws into each TPU\_2
-    parts.
+    parts. 
+    
+    **_ATTENTION:_ Don't apply too much torque on the screws or they may compress the TPU part, go too deep, hit the coils and damage the motor! Also, double check if the screws will not touch the coils because it's easy to mix screws of different sizes.**
 
 ![](./media//media/image68.jpeg) ![](./media//media/image69.jpeg)
 
