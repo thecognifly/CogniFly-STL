@@ -1332,7 +1332,7 @@ camera and prepare the batteries.
 
 ![Une image contenant texte Description générée
 automatiquement](./media//media/image75.jpeg)
-
+You may
 2)  Insert the PLA\_4 in the orientation shown in the following picture.
     The connector side on the PLA\_4 should be the same side than the
     brand on the battery.
@@ -1342,7 +1342,7 @@ automatiquement](./media//media/image76.jpeg) ![Une image contenant
 outil Description générée automatiquement](./media//media/image77.jpeg)
 
 3)  Insert the Deans connector into the hole of PLA\_4 part. You may use
-    a plier to put it in place.
+    pliers to put it in place, **but be careful not to short-circuit the battery terminals or damage it**.
 
 ![](./media//media/image78.jpeg) ![](./media//media/image79.jpeg)
 
@@ -1477,7 +1477,7 @@ Connect the battery to the drone and enable motor control.
 
 **Step 7**
 
-For motor tests, hold safely the drone and increase slowly the control
+For the initial motor tests, ***remove the propellers***, hold safely the drone and increase slowly the control
 bar of motor 1. If abnormal behaviour occurs, put back control bar to 0
 and solve the issue. If motor is vibrating without turning, this may be
 a sign of disconnected or shorted wires (verify soldering of the three
