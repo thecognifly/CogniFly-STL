@@ -31,7 +31,7 @@ Flight controller and ESC (4-in-1) are mounted between the battery and the centr
 - TPU 95A for flexible parts
 - PLA or ABS for the rigid ones
 ### Struts
-- 3mm diam. carbon fibre rods or BBQ bamboo skewers with these approximate lengths: 8x 195mm (external cage), 8x 97mm (arms) and 4x 72mm (legs).
+- 3mm diam. carbon fibre rods or BBQ bamboo skewers with these approximate lengths: 8x 195mm (*"external cage"*), 8x 97mm (arms) and 4x 72mm (legs).
 ### Flight Controller (20x20mm mounting holes)
 - (1x) Holybro Kakute F7 Mini V2 (used in our paper) or Heli-Nation Talon F7 Fusion
 ### 4 in 1 ESC (20x20mm mounting holes)
