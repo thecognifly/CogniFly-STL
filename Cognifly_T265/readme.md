@@ -1,4 +1,4 @@
-# Building Instructions (Version 2)
+# Building Instructions (Version 1)
 
 The Cognifly is a drone with easy manufacturing, allowing
 customization and autonomous flight. It has an optical flow and lidar,
@@ -10,12 +10,13 @@ configuration of the drone.
 
 This version of the cognifly features an intel realsense T265 camera for stabilization in challenging environments and the proper battery to support the additional weight. It can also use a crazyfly multiranger deck for onboard obstacle detection. 
 
+
 The frame is built with wood sticks and resists to impact while flying.
 Another configuration is possible with carbon fiber, but it is more
 expensive and heavier. The carbon fiber version of CogniFly weighs 370g. It uses a LiPo battery 4S (14.8V, 130C) with a
 1800mAh capacity, leading to a 10-minute flight time.
 
-
+**Note** that the *Latest* version of the cognifly can be adapted to support the T265, by swapping the base mounts.
 
 ![](./media//media/u1.jpeg)
 
@@ -31,7 +32,7 @@ expensive and heavier. The carbon fiber version of CogniFly weighs 370g. It uses
     * [Putting everything together](readme.md#putting-everything-together)
 3. [Software setup](readme.md#software-setup)
     * [INAV](readme.md#inav)
-    * [Raspberry Pi Zero W](readme.md#raspberry-pi-zero-w)
+    * [Raspberry Pi Zero 2W](readme.md#raspberry-pi-zero-w)
 4. [Troubleshooting](readme.md#troubleshooting)
     * [Wifi not working](readme.md#wifi-not-working)
     * [ssh not available](readme.md#ssh-not-available)
@@ -525,17 +526,17 @@ configuration:
 | Joint  | 3D part                         | Quantity            | Joint  | 3D part                         | Quantity |
 | ------ | ------------------------------- | ------------------- | ------ | ------------------------------- | -------- |
 | PLA\_1 | ![](./media//media/image11.png) | 1                   | PLA\_5 | ![](./media//media/image12.png) | 2        |
-| PLA\_2 | ![](./media//media/image13.png) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
-| PLA\_3 | ![](./media//media/image15.png) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
-| PLA\_4 | ![](./media//media/image17.png) | Number of batteries |        |                                 |          |
+| PLA\_2 | ![](./media//media/u2.png) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
+| PLA\_3 | ![](./media//media/u3.png) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
+| PLA\_4 | ![](./media//media/u4.png) | Number of batteries |        |                                 |          |
 
 Orientation of the parts in the printer are shown in figure 2. The
 printing time is 1h35 for the PLA\_1 part (without printing supports)
-and 4h46 for the other PLA parts (with printing support).
+and 3h for the other PLA parts (except the battery case). The printing time of the battery case is 4h16.
 
 *Figure 2: Layout of PLA parts on Ultimaker 3*
 
-![](./media//media/image18.png) ![](./media//media/image19.png)
+![](./media//media/image18.png) ![](./media//media/u5.png) ![](./media//media/u6.png)
 
 **Step 3**
 
@@ -663,84 +664,60 @@ générée automatiquement](./media//media/image36.jpeg)
 ### Electronics
 
 The electronics of the drone need to be soldered into the flight
-controller (FC). The Optical flow sensor and the Raspberry Pi Zero W use
+controller (FC). The Optical flow sensor and the Raspberry Pi Zero 2W use
 the UART ports, and the motors are connected with three wires each into
 the ESC (integrated to the flight controller board).
 
 **Step 6**
 
-Take the flight controller, the Raspberry Pi, the Optical Flow, the four
-motors, the Deans connector, the part PLA\_2 and PLA\_3, and the wires
-as shown on the figure 5.
+Take the flight controller, the Raspberry Pi, the Optical Flow, and the four
+motors.
 
-*Figure 5: Electronics components*
-
-![](./media//media/image42.jpeg)
 
 Connect all the components to the flight controller as following.
 
-1)  Solder the Deans connector with the black and red wires from the FC
-    package. Make sure to respect polarity as shown on the picture
 
-![](./media//media/image43.jpeg) ![](./media//media/image44.jpeg)
-
-2)  Insert the wires of the connector into the PLA\_3 part and glue the
-    connector with hot glue. You can cut the wires to have a length of
-    approximately 5cm.
-
-![](./media//media/image45.jpeg) ![](./media//media/image46.jpeg)
-
-3)  Solder the wires on the + (red) and – (black) connection of the
-    flight controller.
-
-![](./media//media/image47.jpeg)
-
-4)  Take the AWG28 wires and cut them of approximately 10cm. Put some
+1)  Take the AWG28 wires and cut them of approximately 15cm. Put some
     flux and tin on the following connectors of the FC: TX2; RX2; TX6;
     RX6; 4.5V; 5V; Ground (2) and all motors connectors.
 
-![](./media//media/image48.jpeg) ![](./media//media/image49.jpeg)
+![](./media//media/image48.jpeg) 
 
-5)  Solder the AWG28 wires on the connectors of the FC you prepared in
+2)  Solder the AWG28 wires on the connectors of the FC you prepared in
     previous step. Help you with the pictures.
 
-![](./media//media/image50.jpeg)
+![](./media//media/u8.jfif)
 
 The UART2 (TX2 and RX2) will be connected to the optical flow and UART6
 (TX6 and RX6) will be connected to the Raspberry Pi. Before you decide
 to change the ports, note that the Raspberry Pi has to be connected to
 UART6 to work properly.
 
-6)  Cut the wires of the motors about 8cm long and solder them on the
-    flight controller. Note that in the straight condition (propellers
+3)  Solder the motor wires onto the FC. Note that in the straight condition (propellers
     facing up and the arrow of the FC facing up, pointing forward), the
     wires of the motors are not crossing except for motor 3 (indicated
     on FC) which should have two wires inverted. This should guarantee
     the motors to spin in the good orientation. Help you with the
-    following picture to follow the wires.
+    following picture to follow the wires. 
+    
+    Therefore, each motor (except motor 3), facing upwards (see picture below) has their outwards wire connected to the outermost pads, the middle with the middle ones, and the inner ones with the inner ones.
+    Motor 3's outermost wire goes to the middle pad, and the outermost pad is connected to motor 3's middle wire.
 
-![](./media//media/image51.jpeg)
 
-![](./media//media/image52.jpeg)![](./media//media/image53.jpeg)
+![](./media//media/u9.jpeg)
 
-7)  Solder the optical flow. Connect the TX of the optical flow to RX2
+4)  Solder the optical flow. Connect the TX of the optical flow to RX2
     on the FC; the RX of the optical flow with the TX2 on the FC; the
     ground together and the 5V of the optical flow to the 4.5V of the
     FC.
 
-![](./media//media/image54.jpeg)![](./media//media/image55.jpeg)
-
-8)  Solder the Raspberry Pi. Connect the 5V of the FC to the PIN2 (upper
+5)  Solder the Raspberry Pi. Connect the 5V of the FC to the PIN2 (upper
     left connector when facing down), the ground to PIN6 (the third left
     connector), the RX6 of optical flow to PIN8 (fourth left connector)
     and TX6 of optical flow to PIN10 (fifth left connector).
 
-![](./media//media/image56.jpeg)
+![](./media//media/u10.jpeg)
 
-9)  Glue the PLA\_2 part to the PLA\_3 part with hot glue as shown in
-    the following figure.
-
-![](./media//media/image57.jpeg)![](./media//media/image58.jpeg)
 
 ### Putting everything together
 
@@ -1027,7 +1004,7 @@ requires the drone to be hold horizontal).
 
 INAV configuration is now completed
 
-### Raspberry Pi Zero W
+### Raspberry Pi Zero 2W
 
 The configuration of the Raspberry Pi Zero is easily made loading a disk
 image on the micro-SD card. It allows to execute Python programs
