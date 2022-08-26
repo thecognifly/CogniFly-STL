@@ -526,9 +526,9 @@ configuration:
 | Joint  | 3D part                         | Quantity            | Joint  | 3D part                         | Quantity |
 | ------ | ------------------------------- | ------------------- | ------ | ------------------------------- | -------- |
 | PLA\_1 | ![](./media//media/image11.png) | 1                   | PLA\_5 | ![](./media//media/image12.png) | 2        |
-| PLA\_2 | ![](./media//media/u2.png) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
-| PLA\_3 | ![](./media//media/u3.png) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
-| PLA\_4 | ![](./media//media/u4.png) | Number of batteries |        |                                 |          |
+| PLA\_2 | ![](./media//media/u2.PNG) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
+| PLA\_3 | ![](./media//media/u3.PNG) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
+| PLA\_4 | ![](./media//media/u4.PNG) | Number of batteries |        |                                 |          |
 
 Orientation of the parts in the printer are shown in figure 2. The
 printing time is 1h35 for the PLA\_1 part (without printing supports)
@@ -536,7 +536,7 @@ and 3h for the other PLA parts (except the battery case). The printing time of t
 
 *Figure 2: Layout of PLA parts on Ultimaker 3*
 
-![](./media//media/image18.png) ![](./media//media/u5.png) ![](./media//media/u6.png)
+![](./media//media/image18.png) ![](./media//media/u5.PNG) ![](./media//media/u6.PNG)
 
 **Step 3**
 
