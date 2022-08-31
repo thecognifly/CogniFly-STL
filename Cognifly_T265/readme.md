@@ -3,8 +3,7 @@
 The Cognifly is a drone with easy manufacturing, allowing
 customization and autonomous flight. It has an optical flow and lidar,
 allowing position and altitude hold, and a Raspberry Pi Zero 2W, allowing
-wireless control and data processing. A Pi camera can be linked to the
-Raspberry pi allows image processing to do an autonomous flight. The
+wireless control and data processing. The
 flight controller is working with INAV, which allows an easy
 configuration of the drone.
 
@@ -122,18 +121,6 @@ screws, wire strippers, pliers…
 <td>CF24</td>
 <td>Raspberry Pi Zero 2W</td>
 <td>Raspberry Pi Zero 2W (Wireless)</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>CF25</td>
-<td>Pi camera</td>
-<td>Raspberry Pi Camera V2 - 8MP</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>CF26</td>
-<td>Mini camera cable</td>
-<td>Raspberry Pi Zero Mini Camera Cable - 38mm</td>
 <td>1</td>
 </tr>
 <tr class="even">
@@ -307,26 +294,6 @@ grocery store</td>
 <td>222,9</td>
 </tr>
 <tr class="even">
-<td>Pi camera</td>
-<td><a href="https://www.pishop.ca/product/raspberry-pi-noir-camera-module-v2-8mp/"><span class="underline">Pishop</span></a></td>
-<td>1</td>
-<td>1</td>
-<td>35,95</td>
-<td>35,95</td>
-<td>179,75</td>
-<td>359,50</td>
-</tr>
-<tr class="odd">
-<td>Mini camera cable</td>
-<td><a href="https://www.pishop.ca/product/raspberry-pi-zero-mini-camera-cable-38mm/"><span class="underline">Pishop</span></a></td>
-<td>1</td>
-<td>1</td>
-<td>2,95</td>
-<td>2,95</td>
-<td>14,75</td>
-<td>29,50</td>
-</tr>
-<tr class="even">
 <td>Deans connector</td>
 <td><a href="https://www.amazon.ca/-/fr/UEETEK-paires-connecteurs-ultra-batterie/dp/B077TXMTJZ/ref=sr_1_6?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Deans+connector&amp;qid=1626963349&amp;sr=8-6"><span class="underline">Amazon</span></a><br />
 <a href="https://www.amazon.ca/paires-connecteurs-femelles-silicone-batterie/dp/B07WHPD4KD/ref=sr_1_1_sspa?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Deans+connector&amp;qid=1629402395&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExVDQ5UjZZSFpPTVhVJmVuY3J5cHRlZElkPUEwMTg5ODI2MlNETDFKWE1YRDRWUiZlbmNyeXB0ZWRBZElkPUEwODQyNjMzMTdSTkRWUUc2MExYQiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><span class="underline">Amazon</span></a></td>
@@ -427,6 +394,15 @@ grocery store</td>
 <td>7,99</td>
 <td>7,99</td>
 </tr>
+<td>Gorilla glue</td>
+<td><a href="https://www.amazon.ca/-/fr/Adtech-W220-34ZIP30-b%C3%A2tons-colle-chaude/dp/B00009RUCS/ref=sr_1_6?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Hot+glue&amp;qid=1629474469&amp;sr=8-6"><span class="underline">XXXX</span></a></td>
+<td>1</td>
+<td>15+</td>
+<td>7,99</td>
+<td>7,99</td>
+<td>7,99</td>
+<td>7,99</td>
+</tr>
 <tr class="even">
 <td colspan="5">Total</td>
 <td>407,9</td>
@@ -460,8 +436,6 @@ Be aware that some components can be difficult to find and may increase
 a lot the price or the shipping time if not available on the first
 website suggested on the tables (used to calculate the total price).
 This is the case for the Raspberry Pi Zero 2W and the Matek Optical Flow.
-For the Coral boards and cameras, there can be restricted shipping areas
-and may not ship to Canada.
 
 While waiting for the longest shipping orders, you may want to print the
 parts of the drones. 
@@ -661,12 +635,40 @@ générée automatiquement](./media//media/image36.jpeg)
 
 ![](./media//media/image41.jpeg)
 
+16) Thread the holes of the column in the PLA_2 part using a 3mm thread. Be gentle to avoid breaking the columns. 
+
+
 ### Electronics
 
 The electronics of the drone need to be soldered into the flight
 controller (FC). The Optical flow sensor and the Raspberry Pi Zero 2W use
 the UART ports, and the motors are connected with three wires each into
 the ESC (integrated to the flight controller board).
+
+
+** Step 6**
+Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and headers.
+
+
+1) Remove any leftover support from the PLA_9 part. 
+
+![](./media//media/u20.jpeg)
+
+
+2) Press the headers into the rectangular holes until they fit (not exceed the surface of PLA_9), then take them out. Put a bit of super glue on the long recangular hole, and press the headers until the glue dries.
+
+![](./media//media/u21.jpeg)
+
+3) Insert the multiranger deck on the headers.
+
+![](./media//media/u22.jpeg)
+
+4) Take the AG28 wires and cut them in 4 pieces of 15 cm. Solder them to the RX, TX, Ground and VCOM pins ([Multiranger Deck Datasheet](https://www.bitcraze.io/documentation/hardware/multi_ranger_deck/multi-ranger-reve.pdf)) from the top of the headers. Solder the RX and TX to the raspberry pi's TX and RX, respectively. Solder the ground to the raspberry pi's ground and the VCOM to the raspberry pi's 5V voltage input.
+
+![](./media//media/u23.jpeg)
+
+
+
 
 **Step 6**
 
@@ -727,102 +729,93 @@ then be all set for the drone.
 **Step 7**
 
 Take the built frame, the electronics, the propellers, the screws, the
-rubber spacers, the PLA\_5, PLA\_6 and PLA\_7 parts, as shown in figure
-6.
+rubber spacers, the PLA\_2 part.
 
-*Figure 6: Hardware components*
+1) Place the PLA\_2 above the screw holes of the PLA\_1 part.
+![](./media//media/u12.jpeg)
 
-![](./media//media/image59.jpeg)
-
-1)  Insert the 16mm screws into the four holes of the flight controller
+2)  Insert the 16mm screws into the four holes of the flight controller
     from bottom, then insert four rubber spacers into the screws from
-    the top of the flight controller.
+    the top of the flight controller. Orient the flight controller so that the micro USB port side faces the PLA\_1 part, and that the power input of the flight controller faces the direction of the 4 pillars of the PLA\_2 part.
 
-![](./media//media/image60.jpeg)![](./media//media/image61.jpeg)
+![](./media//media/u11.jpeg)![](./media//media/u13.jpeg)
 
-2)  Screw the 16mm screws into PLA\_1 so that the spacers begin to be
+3)  Screw the 16mm screws into PLA\_1 so that the spacers begin to be
     compressed.
 
-![](./media//media/image62.jpeg)
+![](./media//media/u14.jpeg)
 
-3)  Insert a 16mm screw in each PLA\_5 part, put it into the two holes
-    of PLA\_1 part aligned with the Deans connector. Then screw them
+4) Put the motors at their respective place by passing them through the
+    wood sticks, then screw them with the 4mm screws into each TPU\_2 through the PLA\_8
+    parts. 
+
+    **_ATTENTION:_ Don't apply too much torque on the screws or they may go too deep, hit the coils and damage the motor! Also, double check if the screws will not touch the coils because it's easy to mix screws of different sizes.**
+
+
+![](./media//media/u15.jpeg)
+
+
+5)  Insert a 16mm screw in each PLA\_5 part, put it into the two holes
+    of PLA\_1 part. Then screw them
     into the PLA\_3 part. Make sure to not stuck the small wires.
+    If the screw is too lose, you can add a bolt on the other side of the PLA\_3 part.
 
 ![](./media//media/image63.jpeg)![](./media//media/image64.jpeg)
 
-4)  Remove the TPU\_1 joint of Raspberry Pi’s wires side from the PLA\_1
-    part. Put the wires into the free space of TPU\_1, as shown int the
-    following figure. Then reinsert TPU\_1 joint.
+6)  Place the raspberry pi so that its camera slot faces the opposite direction of the pillars of the PLA\_2 part. In case your wires are too short, you can remove the TPU\_1 joint of Raspberry Pi’s wires side from the PLA\_1.
 
-![](./media//media/image65.jpeg)
 
-5)  Screw the optical flow into PLA\_2 part with the 7mm screw coming
-    with the motors package. Insert a rubber spacer between the optical
-    flow and PLA\_2.
+7)  Screw the optical flow into PLA\_2 part with the 7mm screw coming
+    with the motors package. Make sure that the optical flow is mounted in the same direction as the picture below, so that it will not be blocked later on by the T265 camera. Insert a rubber spacer between the optical
+    flow and PLA\_2. 
 
-![](./media//media/image66.jpeg) ![](./media//media/image67.jpeg)
 
-6)  Put the motors at their respective place by passing them through the
-    wood sticks, then screw them with the 4mm screws into each TPU\_2
-    parts. 
+
     
-    **_ATTENTION:_ Don't apply too much torque on the screws or they may compress the TPU part, go too deep, hit the coils and damage the motor! Also, double check if the screws will not touch the coils because it's easy to mix screws of different sizes.**
+    
 
-![](./media//media/image68.jpeg) ![](./media//media/image69.jpeg)
+![](./media//media/u16.jpeg) ![](./media//media/u17.jpeg)
 
 7)  Screw the Raspberry Pi with the 7mm screws (coming with the motor
-    package) to the PLA\_5 parts. Make sure the camera connector of the
+    package) to the PLA\_5 parts, through the PLA_9 part (multiranger mount). Make sure the camera connector of the
     Raspberry Pi is facing the front (Optical Flow side), while
     inserting the PLA\_6 and PLA\_7 parts at the front and two rubber
     spacers at the back. Refer to the following figure.
 
-![](./media//media/image70.jpeg) ![](./media//media/image71.jpeg)
+![](./media//media/u23.jpeg) 
 
 8)  Screw the CW propellers with two 7mm screws each (from the motors
     package), at the front left and the back right of the drone, and the
     CCW propellers at the front right and the back left.
 
-![](./media//media/image72.jpeg) ![](./media//media/image73.jpeg)
 
 9)  Push the TPU\_2 parts across the wood sticks to make sure there is a
     gap of around 1cm between the propellers and the frame.
 
-![](./media//media/image74.jpeg)
+
+10) Solder the power cables to the FC.
 
 **Step 8**
 
-Last step to complete the assembly of the drone, you must connect the Pi
-camera and prepare the batteries.
+Last step to complete the assembly of the drone. Prepare the T265 camera.
 
-1)  Put electric tape around the top of the LiPo battery (it will allow
-    to glue the PLA support not directly on the battery).
 
-![Une image contenant texte Description générée
-automatiquement](./media//media/image75.jpeg)
-You may
-2)  Insert the PLA\_4 in the orientation shown in the following picture.
-    The connector side on the PLA\_4 should be the same side than the
-    brand on the battery.
+1) Screw the PLA\_3 part on the PLA\_2 in the orientation shown in the picture below. Make sure that the screws going on the holes inside the frame do not have a head that is too high, to prevent damaging the battery.
 
-![Une image contenant texte Description générée
-automatiquement](./media//media/image76.jpeg) ![Une image contenant
-outil Description générée automatiquement](./media//media/image77.jpeg)
+![](./media//media/u18.jpeg)
 
-3)  Insert the Deans connector into the hole of PLA\_4 part. You may use
-    pliers to put it in place, **but be careful not to short-circuit the battery terminals or damage it**.
+2) Screw the T265 camera on the PLA\_4 part, in the orientation shown in the picture below (logo upside down, on the right side).
 
-![](./media//media/image78.jpeg) ![](./media//media/image79.jpeg)
 
-4)  Put hot glue between the PLA\_4 part and the battery (side of the
-    connector). You must fill the gap with glue while maintaining the
-    PLA\_4 part in a position where the Dean connector is horizontal.
-    This will allow a smooth insertion of the battery in the drone.
+3) Use zip tizes to attach the PLA\_4 part to the frame. Before moving on, verify that the center of gravity of the camera is about 65mm +-15mm away from the center of the FC.
 
-![Une image contenant plancher Description générée
-automatiquement](./media//media/image80.jpeg)
+![](./media//media/u19.jpeg)
 
-5)  Redo steps 1 to 4 for the number of batteries you want to use.
+
+4) Put hot glue inside the zip ties, between part PLA\_4 and the frame. Proceed carefully to avoid putting hot glue on the T265. If you filp the drone to put hot glue, turn the propellers so that they are not under the glue, otherwise it can fall on them.
+
+
+
 
 **Safety precaution and troubleshooting**:  
 Before connecting the battery
@@ -839,32 +832,12 @@ One extra suggestion is to wear safety glasses when operating the drone
 because the motors spin at high speeds and a faulty propeller could shatter projecting 
 plastic bits towards your eyes.
 
-*Figure 7: Camera Components*
-
-![](./media//media/image81.jpeg)
-
-6)  Connect the camera cable to the Pi camera.
-
-![](./media//media/image82.jpeg)
-
-7)  Connect the other side of the camera cable to the Raspberry Pi Zero
-    of the drone.
-
-![Une image contenant équipement électronique Description générée
-automatiquement](./media//media/image83.jpeg)
-
-8)  Screw the Pi camera with four 7mm screws (from the motors package)
-    on the PLA\_6 and PLA\_7 supports.
-
-![](./media//media/image84.jpeg)
 
 The hardware of the drone is now ready. Next step will be to setup the
 firmware and the configuration of the fight controller with INAV and the
 files on the Raspberry Pi.
 
-![Une image contenant plancher Description générée
-automatiquement](./media//media/image85.jpeg)
-![](./media//media/image86.jpeg)
+XXX insert picture here
 
 ## Software setup
 
@@ -1075,15 +1048,11 @@ drone name in */rootfs/etc/hosts* file.
 
 **Step 17**
 
-Enable the pi camera and the UART serial port editing the
+Enable the multiranger and the i2C port editing the
 */boot/config.txt* file under the *\[all\]* section, set the following
 lines:
 ```
-enable_uart=1 # serial port
-
-start_x=1 # camera
-
-gpu_mem=128 # camera
+```dtparam=i2c_arm=on,i2c_arm_baudrate=400000```
 ```
 
 **Step 18**
@@ -1115,6 +1084,15 @@ sudo apt-get update
 
 sudo apt-get install libatlas-base-dev libopenjp2-7 libtiff5 python3-pip
 ```
+To use the multiranger, execute the following commands:
+```
+sudo apt-get install -y python-smbus i2c-tools
+
+sudo pip install smbus2 
+
+sudo pip install vl53l1x
+```
+
 
 **Step 22**
 
@@ -1191,7 +1169,13 @@ It's possible to enable SSH by simply creating an empty file named ```ssh.txt```
 ### Flashing the FC
 - Double check you are using the correct firmware version.
 - Make sure you set the flight controller to DFU mode before trying to flash a new firmware.
-
+### Some motors overheat
+If some motors are hotter than the others, it is possible that they are not calibrated properly. To calibrate them, download BL-Heli and follow:
+- Take the propellers off
+- Unplug the battery
+- Connect to the FC
+- Open BL-heli configurator as administrator (or root)
+- Go to motors, check the acknowledgement and follow the calibration instructions.
 
 ## Acknowledgements
 Author of the original version of this manual: https://github.com/CharlesSol7
