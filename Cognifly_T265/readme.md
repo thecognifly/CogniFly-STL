@@ -394,15 +394,6 @@ grocery store</td>
 <td>7,99</td>
 <td>7,99</td>
 </tr>
-<td>Gorilla glue</td>
-<td><a href="https://www.amazon.ca/-/fr/Adtech-W220-34ZIP30-b%C3%A2tons-colle-chaude/dp/B00009RUCS/ref=sr_1_6?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Hot+glue&amp;qid=1629474469&amp;sr=8-6"><span class="underline">XXXX</span></a></td>
-<td>1</td>
-<td>15+</td>
-<td>7,99</td>
-<td>7,99</td>
-<td>7,99</td>
-<td>7,99</td>
-</tr>
 <tr class="even">
 <td colspan="5">Total</td>
 <td>407,9</td>
@@ -418,17 +409,11 @@ grocery store</td>
 </tbody>
 </table>
 
-When not highlighted in red or brown, the shipping should be from 1 day
-to two weeks, depending on the selected option on the order. The
-availability of the links may change and would need some more research
-to find the same components.
-
-The price does not include the shipping apart from the raspberry pi
-alone as each order (on Canakit; one Pi at a time) must be shipped
+The price does not include the shipping as each order must be shipped
 separately. The price can be cheaper than shown on this document,
 particularly for building a little number of drones, as you may already
 have some component (for example the PLA filament) or if you find some
-website shipping smaller quantities (for example connectors). Two
+website shipping smaller quantities (for example connectors). It can also be more expensive due to the ongoing raspberry pi shortage. Two
 batteries have been considered per drone to allow more flight
 flexibility, but you may want to have more or less of those.
 
@@ -502,7 +487,8 @@ configuration:
 | PLA\_1 | ![](./media//media/image11.png) | 1                   | PLA\_5 | ![](./media//media/image12.png) | 2        |
 | PLA\_2 | ![](./media//media/u2.PNG) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
 | PLA\_3 | ![](./media//media/u3.PNG) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
-| PLA\_4 | ![](./media//media/u4.PNG) | 1                   | PLA\_8 | ![](./media//media/u24.PNG) | 1        |
+| PLA\_4 | ![](./media//media/u4.PNG) | 1                   | PLA\_8 | ![](./media//media/u24.PNG) | 4        |
+| PLA\_9 | ![](./media//media/u25.PNG) | 1 
 Number of batteries |        |                                 |          |
 
 Orientation of the parts in the printer are shown in figure 2. The
@@ -511,7 +497,7 @@ and 3h for the other PLA parts (except the battery case). The printing time of t
 
 *Figure 2: Layout of PLA parts on Ultimaker 3*
 
-![](./media//media/image18.png) ![](./media//media/u5.PNG) ![](./media//media/u6.PNG)
+![](./media//media/image18.png) ![](./media//media/u26.PNG) ![](./media//media/u6.PNG)
 
 **Step 3**
 
@@ -664,7 +650,7 @@ Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and
 
 ![](./media//media/u22.jpeg)
 
-4) Take the AG28 wires and cut them in 4 pieces of 15 cm. Solder them to the RX, TX, Ground and VCOM pins ([Multiranger Deck Datasheet](https://www.bitcraze.io/documentation/hardware/multi_ranger_deck/multi-ranger-reve.pdf)) from the top of the headers. Solder the RX and TX to the raspberry pi's TX and RX, respectively. Solder the ground to the raspberry pi's ground and the VCOM to the raspberry pi's 5V voltage input.
+4) Take the AG28 wires and cut them in 4 pieces of 15 cm. Solder them to the RX, TX, Ground and VCOM pins ([Multiranger Deck Datasheet](https://www.bitcraze.io/documentation/hardware/multi_ranger_deck/multi-ranger-reve.pdf)) from the top of the headers. Solder the SDA and SCL to the raspberry pi's SDA and SCL, respectively. Solder the ground to the raspberry pi's ground and the VCOM to the raspberry pi's 5V voltage input.
 
 ![](./media//media/u23.jpeg)
 
@@ -838,7 +824,6 @@ The hardware of the drone is now ready. Next step will be to setup the
 firmware and the configuration of the fight controller with INAV and the
 files on the Raspberry Pi.
 
-XXX insert picture here
 
 ## Software setup
 
@@ -1171,7 +1156,7 @@ It's possible to enable SSH by simply creating an empty file named ```ssh.txt```
 - Double check you are using the correct firmware version.
 - Make sure you set the flight controller to DFU mode before trying to flash a new firmware.
 ### Some motors overheat
-If some motors are hotter than the others, it is possible that they are not calibrated properly. To calibrate them, download BL-Heli and follow:
+If some motors are hotter than the others, it is possible that they are not calibrated properly. To calibrate them, download [BLHeli](https://github.com/blheli-configurator/blheli-configurator/releases) and follow:
 - Take the propellers off
 - Unplug the battery
 - Connect to the FC
