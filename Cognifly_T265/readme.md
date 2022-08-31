@@ -502,7 +502,8 @@ configuration:
 | PLA\_1 | ![](./media//media/image11.png) | 1                   | PLA\_5 | ![](./media//media/image12.png) | 2        |
 | PLA\_2 | ![](./media//media/u2.PNG) | 1                   | PLA\_6 | ![](./media//media/image14.png) | 1        |
 | PLA\_3 | ![](./media//media/u3.PNG) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
-| PLA\_4 | ![](./media//media/u4.PNG) | Number of batteries |        |                                 |          |
+| PLA\_4 | ![](./media//media/u4.PNG) | 1                   | PLA\_8 | ![](./media//media/u24.PNG) | 1        |
+Number of batteries |        |                                 |          |
 
 Orientation of the parts in the printer are shown in figure 2. The
 printing time is 1h35 for the PLA\_1 part (without printing supports)
