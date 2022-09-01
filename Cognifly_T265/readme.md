@@ -155,6 +155,12 @@ screws, wire strippers, pliers…
 <td>4 Wires 28/32 AWG (4 colors)</td>
 <td>2X15cm</td>
 </tr>
+<tr class="odd">
+<td>CF30</td>
+<td>Intel realsense T265 camera</td>
+<td>Camera for visual-inertial odometry</td>
+<td>1</td>
+</tr>
 
 </tbody>
 </table>
@@ -283,20 +289,22 @@ grocery store</td>
 </td>
 <td>1</td>
 <td>1</td>
-<td><p>24.219</p>
+<td><p>24,219</p>
 <p>(22,29)</p></td>
 <td>22,29</td>
 <td>111,45</td>
 <td>222,9</td>
 </tr>
+<tr class="even">
+<td>Intel Realsense T265</td>
+<td><p><a href="https://www.ebay.com/p/2302772770"><span class="underline">Ebay</span></a></p>
+</td>
 <td>1</td>
-<td><p>10</p>
-<p>5</p></td>
-<td><p>11,99</p>
-<p>(12,99)</p></td>
-<td>11,99</td>
-<td>11,99</td>
-<td>11,99</td>
+<td>1</td>
+<td><p>477,5</p>
+<td>477,5</td>
+<td>2387,5</td>
+<td>4775</td>
 </tr>
 <tr class="odd">
 <td>SD card</td>
@@ -388,15 +396,15 @@ grocery store</td>
 </tr>
 <tr class="even">
 <td colspan="5">Total</td>
-<td>407,9</td>
-<td>1502,75</td>
-<td>2881,99</td>
+<td>802,15</td>
+<td>4010,6</td>
+<td>8021,2</td>
 </tr>
 <tr class="odd">
 <td colspan="5">Unit total</td>
-<td>407,9</td>
-<td>300,55</td>
-<td>288,199</td>
+<td>802,15</td>
+<td>695,07</td>
+<td>695,07</td>
 </tr>
 </tbody>
 </table>
