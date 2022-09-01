@@ -11,20 +11,21 @@ This version of the cognifly features an intel realsense T265 camera for stabili
 
 
 The frame is built with wood sticks and resists to impact while flying.
-Another configuration is possible with carbon fiber, but it is more
-expensive and heavier. The carbon fiber version of CogniFly weighs 370g. It uses a LiPo battery 4S (14.8V, 130C) with a
+Another configuration is possible with carbon fiber. It is highly recommended, as the frame can resist to more violent impacts (which can occur due to the increased weight of this version of the Cognifly). However, it is more
+expensive and heavier. 
+
+
+The carbon fiber version of CogniFly weighs 370g. It uses a LiPo battery 4S (14.8V, 130C) with a
 1800mAh capacity, leading to a 10-minute flight time.
 
-**Note** that the *Latest* version of the cognifly can be adapted to support the T265, by swapping the base mounts.
+**Note** that the [Latest](../Latest/readme.md) version of the cognifly can be adapted to support the T265, by swapping the base mounts.
 
 ![](./media//media/u1.jpeg)
 
 ## Table of Contents
 1. [Bill of Materials](readme.md#bill-of-materials)
     * [Table 1: Description of the hardware for one drone](readme.md#table-1-description-of-the-hardware-for-one-drone)
-    * [Table 2: Bill of Materials using a Raspberry Pi Zero](readme.md#table-2-bill-of-materials-using-a-raspberry-pi-zero)
-    * [Table 3: Bill of Materials using a Google AIY Vision Kit](readme.md#table-3-bill-of-materials-using-a-google-aiy-vision-kit)
-    * [Table 4: Bill of Materials using a Coral board](readme.md#table-4-bill-of-materials-using-a-coral-board)
+    * [Table 2: Bill of Materials using a Raspberry Pi zero 2W](readme.md#table-2-bill-of-materials-using-a-raspberry-pi-zero)
 2. [Building the drone](readme.md#building-the-drone)
     * [Frame](readme.md#frame)
     * [Electronics](readme.md#electronics)
@@ -36,6 +37,7 @@ expensive and heavier. The carbon fiber version of CogniFly weighs 370g. It uses
     * [Wifi not working](readme.md#wifi-not-working)
     * [ssh not available](readme.md#ssh-not-available)
     * [Flashing the FC](readme.md#flashing-the-fc)
+    * [Motors overheating](readme.md#some-motors-overheat)
 5. [Acknowledgements](readme.md#acknowledgements)
 
 ## Bill of Materials
@@ -43,7 +45,7 @@ expensive and heavier. The carbon fiber version of CogniFly weighs 370g. It uses
 To build this drone, some tools will be needed and not included in the
 following list: a 3D printer (ideally two so you can print continuously
 the TPU parts and the PLA parts for more than 1 drone), a soldering iron
-with tin (and flux), a hot glue gun with glue, and a screwdriver for M2
+with tin (and flux), a hot glue gun with glue, super glue, and a screwdriver for M2 & M3
 screws, wire strippers, pliers…
 
 ### *Table 1: Description of the hardware for one drone*
@@ -86,22 +88,22 @@ screws, wire strippers, pliers…
 <td>Motor XING2 1404 3000KV</td>
 <td><p>Motor XING2 1404<br />
 3000KV; 10,1g</p>
-<p>(7mm screws included used for propellers, Raspberry Pi, Camera, and optical flow attachment)</p></td>
+<p>(7mm screws included used for propellers, Raspberry Pi, and optical flow attachment)</p></td>
 <td><p>4</p>
 <p>(18)</p></td>
 </tr>
 <tr class="odd">
 <td>CF19</td>
 <td>Screw spacer</td>
-<td>M2/M3 Rubber Damping Ball (for raspberry pi and Optical flow)</td>
-<td>4</td>
+<td>M2 Rubber Damping Ball (for the optical flow)</td>
+<td>2</td>
 </tr>
 <tr class="even">
 <td><p>CF20A</p>
 <p>CF20B</p></td>
 <td>FC – ESC JHEMCU GHF420 35A</td>
 <td><p>20x20mm Jhemcu GHF420AIO F4 OSD Flight Controller w/ 5V 9V BEC Output &amp; Built-in 35A BL_S 4In1 Brushless ESC</p>
-<p>(4 Rubber Damping Balls included used for FC attachment)</p></td>
+<p>(4 Rubber Damping Balls included used for FC attachment and connector to make power cables)</p></td>
 <td><p>1</p>
 <p>(4)</p></td>
 </tr>
@@ -124,37 +126,31 @@ screws, wire strippers, pliers…
 <td>1</td>
 </tr>
 <tr class="even">
-<td>CF27</td>
-<td>Deans connector</td>
-<td>Male Deans connector</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>CF28</td>
+<td>CF25</td>
 <td>SD card</td>
 <td>Micro SD card &gt; 16Go</td>
 <td>1</td>
 </tr>
-<tr class="even">
-<td>CF29</td>
+<tr class="odd">
+<td>CF26</td>
 <td>Lipo 4S 1800mAh</td>
 <td>Sunpadow Lipo Battery Battery 4S; 1800 mAh; 7,4V 130C</td>
 <td>1 or more</td>
 </tr>
-<tr class="odd">
-<td>CF30</td>
+<tr class="even">
+<td>CF27</td>
 <td>M2 Screw 4mm</td>
 <td>M2 Screw 4mm</td>
 <td>16</td>
 </tr>
-<tr class="even">
-<td>CF31</td>
+<tr class="odd">
+<td>CF28</td>
 <td>M2 Screw 16mm</td>
 <td>M2 Screw 16mm</td>
 <td>6</td>
 </tr>
-<tr class="odd">
-<td>CF32</td>
+<tr class="even">
+<td>CF29</td>
 <td>Wire 28/32 AWG</td>
 <td>4 Wires 28/32 AWG (4 colors)</td>
 <td>2X15cm</td>
@@ -293,10 +289,6 @@ grocery store</td>
 <td>111,45</td>
 <td>222,9</td>
 </tr>
-<tr class="even">
-<td>Deans connector</td>
-<td><a href="https://www.amazon.ca/-/fr/UEETEK-paires-connecteurs-ultra-batterie/dp/B077TXMTJZ/ref=sr_1_6?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Deans+connector&amp;qid=1626963349&amp;sr=8-6"><span class="underline">Amazon</span></a><br />
-<a href="https://www.amazon.ca/paires-connecteurs-femelles-silicone-batterie/dp/B07WHPD4KD/ref=sr_1_1_sspa?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Deans+connector&amp;qid=1629402395&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExVDQ5UjZZSFpPTVhVJmVuY3J5cHRlZElkPUEwMTg5ODI2MlNETDFKWE1YRDRWUiZlbmNyeXB0ZWRBZElkPUEwODQyNjMzMTdSTkRWUUc2MExYQiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="><span class="underline">Amazon</span></a></td>
 <td>1</td>
 <td><p>10</p>
 <p>5</p></td>
@@ -425,6 +417,10 @@ This is the case for the Raspberry Pi Zero 2W and the Matek Optical Flow.
 While waiting for the longest shipping orders, you may want to print the
 parts of the drones. 
 
+## Notes on building
+
+It is advised to test components of the Cognifly as you built it. For instance, as soon as you solder the optical flow to the FC, check on INAV that there are no hardware health issues. You can also test that the raspberry pi can connect to the FC, using the cognifly-controller script (just by connecting the FC to your computer) after having connected the rapsberry pi and the FC.
+
 
 ## Building the drone
 
@@ -489,15 +485,14 @@ configuration:
 | PLA\_3 | ![](./media//media/u3.PNG) | 1                   | PLA\_7 | ![](./media//media/image16.png) | 1        |
 | PLA\_4 | ![](./media//media/u4.PNG) | 1                   | PLA\_8 | ![](./media//media/u24.PNG) | 4        |
 | PLA\_9 | ![](./media//media/u25.PNG) | 1 
-Number of batteries |        |                                 |          |
 
 Orientation of the parts in the printer are shown in figure 2. The
 printing time is 1h35 for the PLA\_1 part (without printing supports)
-and 3h for the other PLA parts (except the battery case). The printing time of the battery case is 4h16.
+and 4h10 for the other PLA parts (except the battery case). The printing time of the battery case is 4h16.
 
 *Figure 2: Layout of PLA parts on Ultimaker 3*
 
-![](./media//media/image18.png) ![](./media//media/u26.PNG) ![](./media//media/u6.PNG)
+![](./media//media/image18.png) ![](./media//media/u27.PNG) ![](./media//media/u6.PNG)
 
 **Step 3**
 
@@ -628,12 +623,10 @@ générée automatiquement](./media//media/image36.jpeg)
 ### Electronics
 
 The electronics of the drone need to be soldered into the flight
-controller (FC). The Optical flow sensor and the Raspberry Pi Zero 2W use
-the UART ports, and the motors are connected with three wires each into
-the ESC (integrated to the flight controller board).
+controller (FC) and the raspberri pi. The multiranger communicates with the raspberry pi via i2C.
 
 
-** Step 6**
+**Step 6**
 Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and headers.
 
 
@@ -642,7 +635,7 @@ Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and
 ![](./media//media/u20.jpeg)
 
 
-2) Press the headers into the rectangular holes until they fit (not exceed the surface of PLA_9), then take them out. Put a bit of super glue on the long recangular hole, and press the headers until the glue dries.
+2) Press the headers into the two rectangular holes until they fit (not exceed the surface of PLA_9), then take them out. Put a bit of super glue inside the two rectangular holes, then the headers until the glue dries.
 
 ![](./media//media/u21.jpeg)
 
@@ -650,17 +643,26 @@ Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and
 
 ![](./media//media/u22.jpeg)
 
-4) Take the AG28 wires and cut them in 4 pieces of 15 cm. Solder them to the RX, TX, Ground and VCOM pins ([Multiranger Deck Datasheet](https://www.bitcraze.io/documentation/hardware/multi_ranger_deck/multi-ranger-reve.pdf)) from the top of the headers. Solder the SDA and SCL to the raspberry pi's SDA and SCL, respectively. Solder the ground to the raspberry pi's ground and the VCOM to the raspberry pi's 5V voltage input.
+4) Take the AG28 wires and cut them in 4 pieces of 15 cm. Solder them to the SDA, SCL, Ground and VCOM pins (see the [Multiranger Deck Schematics](https://www.bitcraze.io/documentation/hardware/multi_ranger_deck/multi-ranger-reve.pdf)) from the top of the headers. Solder the SDA and SCL to the raspberry pi's SDA and SCL, respectively. Solder the ground to the raspberry pi's ground and the VCOM to the raspberry pi's 5V voltage input.
 
 ![](./media//media/u23.jpeg)
 
 
+The Optical flow sensor and the Raspberry Pi Zero 2W use
+the UART ports, and the motors are connected with three wires each into
+the ESC (integrated to the flight controller board).
 
+**Step 7**
+The Optical flow sensor and the Raspberry Pi Zero 2W use
+the UART ports, and the motors are connected with three wires each into
+the ESC (integrated to the flight controller board).
 
-**Step 6**
 
 Take the flight controller, the Raspberry Pi, the Optical Flow, and the four
 motors.
+
+
+Note that this guide's Step 7 is the same as Step 6 in the [Latest](../Latest/readme.md#electronics) version (more detailed).
 
 
 Connect all the components to the flight controller as following.
@@ -713,7 +715,7 @@ UART6 to work properly.
 Now the electronics have to be mounted on the frame, the hardware will
 then be all set for the drone.
 
-**Step 7**
+**Step 8**
 
 Take the built frame, the electronics, the propellers, the screws, the
 rubber spacers, the PLA\_2 part.
@@ -723,7 +725,7 @@ rubber spacers, the PLA\_2 part.
 
 2)  Insert the 16mm screws into the four holes of the flight controller
     from bottom, then insert four rubber spacers into the screws from
-    the top of the flight controller. Orient the flight controller so that the micro USB port side faces the PLA\_1 part, and that the power input of the flight controller faces the direction of the 4 pillars of the PLA\_2 part.
+    the top of the flight controller. Orient the flight controller so that the micro USB port side of the FC faces the PLA\_1 part, and that the power input of the flight controller faces the direction of the 4 pillars of the PLA\_2 part.
 
 ![](./media//media/u11.jpeg)![](./media//media/u13.jpeg)
 
@@ -733,7 +735,7 @@ rubber spacers, the PLA\_2 part.
 ![](./media//media/u14.jpeg)
 
 4) Put the motors at their respective place by passing them through the
-    wood sticks, then screw them with the 4mm screws into each TPU\_2 through the PLA\_8
+    wood sticks, then screw them with the screws from the motor package into each TPU\_2 through the PLA\_8
     parts. 
 
     **_ATTENTION:_ Don't apply too much torque on the screws or they may go too deep, hit the coils and damage the motor! Also, double check if the screws will not touch the coils because it's easy to mix screws of different sizes.**
@@ -745,31 +747,21 @@ rubber spacers, the PLA\_2 part.
 5)  Insert a 16mm screw in each PLA\_5 part, put it into the two holes
     of PLA\_1 part. Then screw them
     into the PLA\_3 part. Make sure to not stuck the small wires.
-    If the screw is too lose, you can add a bolt on the other side of the PLA\_3 part.
+    If the screw is too lose, you can add a nut on the other side of the PLA\_1 part.
 
 ![](./media//media/image63.jpeg)![](./media//media/image64.jpeg)
 
-6)  Place the raspberry pi so that its camera slot faces the opposite direction of the pillars of the PLA\_2 part. In case your wires are too short, you can remove the TPU\_1 joint of Raspberry Pi’s wires side from the PLA\_1.
 
 
-7)  Screw the optical flow into PLA\_2 part with the 7mm screw coming
-    with the motors package. Make sure that the optical flow is mounted in the same direction as the picture below, so that it will not be blocked later on by the T265 camera. Insert a rubber spacer between the optical
-    flow and PLA\_2. 
-
-
-
-    
-    
+6)  Screw the optical flow into PLA\_2 part with the 16mm screws using a nut. Make sure that the optical flow is mounted in the same direction as the picture below, so that it will not be blocked later on by the T265 camera. Insert a rubber spacer between the optical
+    flow and PLA\_2. Refer to the pictures below.
 
 ![](./media//media/u16.jpeg) ![](./media//media/u17.jpeg)
 
-7)  Screw the Raspberry Pi with the 7mm screws (coming with the motor
-    package) to the PLA\_5 parts, through the PLA_9 part (multiranger mount). Make sure the camera connector of the
-    Raspberry Pi is facing the front (Optical Flow side), while
-    inserting the PLA\_6 and PLA\_7 parts at the front and two rubber
-    spacers at the back. Refer to the following figure.
 
-![](./media//media/u23.jpeg) 
+7)  Place the raspberry pi so that its camera slot faces direction of the optical flow. In case your wires are too short, you can remove the TPU\_1 joint of Raspberry Pi’s wires side from the PLA\_1. Place the PLA\_9 part's screw holes above the raspberry pi, so that the multiranger deck is above the rasbperry pi, then screw the PLA\_9 part into the PLA\_1 part through the raspberry pi.
+
+![](./media//media/u23.jpeg)
 
 8)  Screw the CW propellers with two 7mm screws each (from the motors
     package), at the front left and the back right of the drone, and the
@@ -782,16 +774,16 @@ rubber spacers, the PLA\_2 part.
 
 10) Solder the power cables to the FC.
 
-**Step 8**
+**Step 9**
 
 Last step to complete the assembly of the drone. Prepare the T265 camera.
 
 
-1) Screw the PLA\_3 part on the PLA\_2 in the orientation shown in the picture below. Make sure that the screws going on the holes inside the frame do not have a head that is too high, to prevent damaging the battery.
+1) Screw the PLA\_3 part into the PLA\_2 in the orientation shown in the picture below. Make sure that the screws going on the holes inside the frame have a head flat enough, to prevent damaging the battery.
 
 ![](./media//media/u18.jpeg)
 
-2) Screw the T265 camera on the PLA\_4 part, in the orientation shown in the picture below (logo upside down, on the right side).
+2) Screw the T265 camera on the PLA\_4 part, so that the logo upside down, on the right side.
 
 
 3) Use zip tizes to attach the PLA\_4 part to the frame. Before moving on, verify that the center of gravity of the camera is about 65mm +-15mm away from the center of the FC.
@@ -799,7 +791,9 @@ Last step to complete the assembly of the drone. Prepare the T265 camera.
 ![](./media//media/u19.jpeg)
 
 
-4) Put hot glue inside the zip ties, between part PLA\_4 and the frame. Proceed carefully to avoid putting hot glue on the T265. If you filp the drone to put hot glue, turn the propellers so that they are not under the glue, otherwise it can fall on them.
+4) Put hot glue inside the zip ties, between part PLA\_4 and the frame. Proceed carefully to avoid putting hot glue on the T265. If you filp the drone to put more hot glue, turn the propellers so that they are not under the glue, otherwise it can fall on them. 
+
+5) Use zip ties wherever you have loose cables. In particular, verify that no cable is in front of the optical flow. Trim the zip ties to avoid contact with the propellers.
 
 
 
@@ -922,9 +916,6 @@ which ones) by resoldering them on the flight controller (Before
 disordering, double check that the right propellers is on the motor
 shaft).
 
-![Une image contenant texte, portable, ordinateur, équipement
-électronique Description générée
-automatiquement](./media//media/image96.png)
 
 **Step 8**
 
