@@ -427,7 +427,7 @@ parts of the drones.
 
 ## Notes on building
 
-It is advised to test components of the Cognifly as you built it. For instance, as soon as you solder the optical flow to the FC, check on INAV that there are no hardware health issues. You can also test that the raspberry pi can connect to the FC, using the cognifly-controller script (just by connecting the FC to your computer) after having connected the rapsberry pi and the FC.
+It is advised to go through the software setup as you build the Cognifly, to test the components. For instance, as soon as you solder the optical flow to the FC, check on INAV that there are no hardware health issues. You can also test that the raspberry pi can connect to the FC, using the cognifly-controller script (just by connecting the FC to your computer) after having connected the rapsberry pi and the FC.
 
 
 ## Building the drone
@@ -643,7 +643,7 @@ Take the raspberry pi, the multiranger support (PLA_9), the multiranger deck and
 ![](./media//media/u20.jpeg)
 
 
-2) Press the headers into the two rectangular holes until they fit (not exceed the surface of PLA_9), then take them out. Put a bit of super glue inside the two rectangular holes, then the headers until the glue dries.
+2) Press the headers into the two rectangular holes until they fit (not exceed the surface of PLA_9), then take them out. Put a bit of super glue inside the two rectangular holes, then press the headers until the glue dries.
 
 ![](./media//media/u21.jpeg)
 
@@ -661,6 +661,7 @@ the UART ports, and the motors are connected with three wires each into
 the ESC (integrated to the flight controller board).
 
 **Step 7**
+
 The Optical flow sensor and the Raspberry Pi Zero 2W use
 the UART ports, and the motors are connected with three wires each into
 the ESC (integrated to the flight controller board).
@@ -699,7 +700,7 @@ UART6 to work properly.
     the motors to spin in the good orientation. Help you with the
     following picture to follow the wires. 
     
-    Therefore, each motor (except motor 3), facing upwards (see picture below) has their outwards wire connected to the outermost pads, the middle with the middle ones, and the inner ones with the inner ones.
+    Therefore, each motor (except motor 3), facing upwards (see picture below) has their outward wire connected to the outermost pad, the middle with the middle ones, and the inner ones with the inner ones respectively.
     Motor 3's outermost wire goes to the middle pad, and the outermost pad is connected to motor 3's middle wire.
 
 
@@ -731,9 +732,7 @@ rubber spacers, the PLA\_2 part.
 1) Place the PLA\_2 above the screw holes of the PLA\_1 part.
 ![](./media//media/u12.jpeg)
 
-2)  Insert the 16mm screws into the four holes of the flight controller
-    from bottom, then insert four rubber spacers into the screws from
-    the top of the flight controller. Orient the flight controller so that the micro USB port side of the FC faces the PLA\_1 part, and that the power input of the flight controller faces the direction of the 4 pillars of the PLA\_2 part.
+2)  Insert the 16mm screws into the four holes of the flight controller through the FC, then insert four rubber spacers into the screws fbelow the FC. Orient the flight controller so that the micro USB port side of the FC faces the PLA\_1 part, and that the power input of the flight controller faces the direction of the 4 pillars of the PLA\_2 part.
 
 ![](./media//media/u11.jpeg)![](./media//media/u13.jpeg)
 
@@ -753,8 +752,7 @@ rubber spacers, the PLA\_2 part.
 
 
 5)  Insert a 16mm screw in each PLA\_5 part, put it into the two holes
-    of PLA\_1 part. Then screw them
-    into the PLA\_3 part. Make sure to not stuck the small wires.
+    of PLA\_1 part.  Make sure to not stuck the small wires.
     If the screw is too lose, you can add a nut on the other side of the PLA\_1 part.
 
 ![](./media//media/image63.jpeg)![](./media//media/image64.jpeg)
@@ -787,19 +785,22 @@ rubber spacers, the PLA\_2 part.
 Last step to complete the assembly of the drone. Prepare the T265 camera.
 
 
-1) Screw the PLA\_3 part into the PLA\_2 in the orientation shown in the picture below. Make sure that the screws going on the holes inside the frame have a head flat enough, to prevent damaging the battery.
+1) Screw the PLA\_3 part into the PLA\_2 with the orientation shown in the picture below. Make sure that the screws going on the holes inside the battery slot have a head flat enough, to prevent damaging the battery.
 
 ![](./media//media/u18.jpeg)
 
 2) Screw the T265 camera on the PLA\_4 part, so that the logo upside down, on the right side.
 
 
-3) Use zip tizes to attach the PLA\_4 part to the frame. Before moving on, verify that the center of gravity of the camera is about 65mm +-15mm away from the center of the FC.
+3) Use zip ties to attach the PLA\_4 part to the frame (on the 11cm stick). Before moving on, verify that the center of gravity of the camera is about 65mm +-15mm away from the center of the FC.
 
 ![](./media//media/u19.jpeg)
 
 
 4) Put hot glue inside the zip ties, between part PLA\_4 and the frame. Proceed carefully to avoid putting hot glue on the T265. If you filp the drone to put more hot glue, turn the propellers so that they are not under the glue, otherwise it can fall on them. 
+
+
+
 
 5) Use zip ties wherever you have loose cables. In particular, verify that no cable is in front of the optical flow. Trim the zip ties to avoid contact with the propellers.
 
@@ -1154,12 +1155,12 @@ It's possible to enable SSH by simply creating an empty file named ```ssh.txt```
 ### Flashing the FC
 - Double check you are using the correct firmware version.
 - Make sure you set the flight controller to DFU mode before trying to flash a new firmware.
-### Some motors overheat
+### Motors overheat
 If some motors are hotter than the others, it is possible that they are not calibrated properly. To calibrate them, download [BLHeli](https://github.com/blheli-configurator/blheli-configurator/releases) and follow:
-- Take the propellers off
-- Unplug the battery
-- Connect to the FC
-- Open BL-heli configurator as administrator (or root)
+- Take the propellers off.
+- Unplug the battery.
+- Connect to the FC.
+- Open BL-heli configurator as administrator (or root).
 - Go to motors, check the acknowledgement and follow the calibration instructions.
 
 ## Acknowledgements
