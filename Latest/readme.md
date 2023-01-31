@@ -944,7 +944,7 @@ grocery store</td>
 The Coral board has the same connection than the Raspberry Pi Zero and
 includes a memory, which allows to get rid of the SD card. It has better
 performance and can do image processing as it would be with the vision
-bonnet.
+bonnet. More details about using the Coral Dev Mini can be found [here](https://git.mistlab.ca/oduguay/Coral_Cognifly).
 
 When not highlighted in red or brown, the shipping should be from 1 day
 to two weeks, depending on the selected option on the order. The
